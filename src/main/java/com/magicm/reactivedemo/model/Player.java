@@ -28,6 +28,8 @@ public class Player implements Serializable {
     @NotBlank
     private String team;
 
+    private String imageUrl;
+
     @CreatedDate
     private LocalDateTime createdDate = LocalDateTime.now();
 

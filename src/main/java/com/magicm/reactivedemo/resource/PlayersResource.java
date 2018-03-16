@@ -20,6 +20,7 @@ class PlayersResource {
 
     private final PlayerRepository playerRepository;
 
+    @CrossOrigin(origins = "http://localhost:3000") // TODO: enabled for simplicity
     @GetMapping("")
     public Flux<Player> all(@RequestParam(value = "q", required = false) String q,
                             @RequestParam(value = "page", defaultValue = "0") long page,

@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    /*text-align: center;*/
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100vh;
+}
+
+.Player-List {
+    position: relative;
+    background: #e6e6e6;
+    padding: 0 1rem;
+}
+
+.Player {
+    display: flex;
+    align-items: center;
+}
+
+.Player small {
+    display: block;
+}
+
+.Player-Image {
+    width: 50px;
+}
+
+.Player-Image img {
+    max-width: 100%;
+}
+
+.Search {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid #eaeaea;
+}
+
+li button {
+    margin-left: auto;
+}
+
+.user {
+    display: flex;
+}
+
+.user figure {
+    width: 50px;
+    margin: 0;
+    margin-right: 1rem;
+}
+
+.user img {
+    width: 50px;
+}
+
+.Message {
+}
+
+.Message--error {
+    padding-top: 1rem;
+    font-size: .8em;
+    color: red;
+    text-align: left;
+}

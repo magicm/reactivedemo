@@ -28,15 +28,29 @@ class DataInitializer {
             .deleteAll()
             .thenMany(
                 Flux
-                    .just("Rajon Rondo", "Larry Bird", "Bill Russell")
-                    .flatMap(
-                        playerName -> playerRepository.save(
-                                Player.builder()
-                                        .name(playerName)
-                                        .team("Celtics")
-                                        .build()
-                        )
+                    .just(
+                            Player.builder()
+                                    .name("Rajon Rondo")
+                                    .team("Celtics")
+                                    .imageUrl("https://d2cwpp38twqe55.cloudfront.net/req/201803151/images/players/rondora01.jpg")
+                                    .build(),
+                            Player.builder()
+                                    .name("Larry Bird")
+                                    .team("Celtics")
+                                    .imageUrl("https://d2cwpp38twqe55.cloudfront.net/req/201803151/images/players/birdla01.jpg")
+                                    .build(),
+                            Player.builder()
+                                    .name("Bill Russell")
+                                    .team("Celtics")
+                                    .imageUrl("https://d2cwpp38twqe55.cloudfront.net/req/201803151/images/players/russebi01.jpg")
+                                    .build(),
+                            Player.builder()
+                                    .name("Ray Allen")
+                                    .team("Celtics")
+                                    .imageUrl("https://d2cwpp38twqe55.cloudfront.net/req/201803151/images/players/allenra02.jpg")
+                                    .build()
                     )
+                    .flatMap(playerRepository::save)
             )
             .log()
             .subscribe(
